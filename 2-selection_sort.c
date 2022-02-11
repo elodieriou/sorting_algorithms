@@ -16,8 +16,11 @@ void selection_sort(int *array, size_t size)
 		for (j = i + 1; j < size; j++)
 			if (array[j] < array[mini])
 				mini = j;
-		swap(&array[mini], &array[i]);
-		print_array(array, size);
+		if (array[i] != array[mini])
+		{
+			swap(&array[mini], &array[i]);
+			print_array(array, size);
+		}
 	}
 }
 
