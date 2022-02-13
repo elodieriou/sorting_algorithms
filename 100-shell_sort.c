@@ -8,10 +8,10 @@
  */
 void swap(int *a, int *b)
 {
-	int tmp = *a;
+    int tmp = *a;
 
-	*a = *b;
-	*b = tmp;
+    *a = *b;
+    *b = tmp;
 }
 
 /**
@@ -39,9 +39,10 @@ void shell_sort(int *array, size_t size)
 		{
 			value = array[i];
 			j = i;
-			while (j >= interval && array[j - interval] > value)
+			while (j >= interval && array[j - interval] > array[j])
 			{
 				swap(&array[j], &array[j - interval]);
+				/*array[j] = array[j - interval];*/
 				j -= interval;
 			}
 			array[j] = value;
