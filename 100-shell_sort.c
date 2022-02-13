@@ -14,7 +14,10 @@ void shell_sort(int *array, size_t size)
 	int value;
 
 	if (size < 2)
+	{
+		print_array(array, size);
 		return;
+	}
 
 	interval = 1;
 
