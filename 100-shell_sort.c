@@ -1,5 +1,5 @@
 #include "sort.h"
-
+#include <stdio.h>
 /**
  * shell_sort - Function that sorts an array of integers
  * in ascending order using the Shell sort algorithm, using
@@ -13,13 +13,13 @@ void shell_sort(int *array, size_t size)
 	size_t interval, i, j;
 	int value;
 
-	if (array == NULL || size < 2)
+	if (size < 2)
 		return;
 
 	interval = 1;
 
 	while (interval < size / 3)
-		interval *= 3 + 1;
+		interval = interval * 3 + 1;
 
 	while (interval >= 1)
 	{
