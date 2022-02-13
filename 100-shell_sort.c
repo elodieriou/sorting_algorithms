@@ -14,10 +14,7 @@ void shell_sort(int *array, size_t size)
 	int value;
 
 	if (size < 2)
-	{
-		print_array(array, size);
 		return;
-	}
 
 	interval = 1;
 
@@ -37,7 +34,7 @@ void shell_sort(int *array, size_t size)
 			}
 			array[j] = value;
 		}
-		interval /= 3;
+		interval = (interval - 1) / 3;
 		print_array(array, size);
 	}
 }
