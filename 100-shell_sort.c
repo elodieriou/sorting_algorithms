@@ -1,20 +1,6 @@
 #include "sort.h"
 
 /**
- * swap - Swaps the value of a and b
- * @a: pointer to the first integer
- * @b: pointer to the second integer
- * Return: Nothing
- */
-void swap(int *a, int *b)
-{
-    int tmp = *a;
-
-    *a = *b;
-    *b = tmp;
-}
-
-/**
  * shell_sort - Function that sorts an array of integers
  * in ascending order using the Shell sort algorithm, using
  * the Knuth sequence
@@ -39,10 +25,9 @@ void shell_sort(int *array, size_t size)
 		{
 			value = array[i];
 			j = i;
-			while (j >= interval && array[j - interval] > array[j])
+			while (j >= interval && array[j - interval] > value)
 			{
-				swap(&array[j], &array[j - interval]);
-				/*array[j] = array[j - interval];*/
+				array[j] = array[j - interval];
 				j -= interval;
 			}
 			array[j] = value;
