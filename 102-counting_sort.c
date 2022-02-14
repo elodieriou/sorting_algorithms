@@ -37,7 +37,7 @@ void counting_sort(int *array, size_t size)
 	output = malloc(sizeof(int) * size);
 	if (output == NULL)
 		return;
-	count = malloc((max + 1) * sizeof(int));
+	count = malloc((max) * sizeof(int));
 	if (count == NULL)
 		return;
 
