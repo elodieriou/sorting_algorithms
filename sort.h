@@ -29,4 +29,5 @@ void counting_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void radix_counting_sort(int *array, size_t size, int place);
 void heap_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
 #endif
