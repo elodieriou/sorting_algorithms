@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 /**
  * swap - Swaps the value of a and b
  * @a: pointer to the first integer
@@ -30,13 +29,18 @@ int partition(int array[], int low, int high)
 		if (array[j] <= pivot)
 		{
 			i++;
-			swap(&array[i], &array[j]);
-			if (i != j && j != high)
+			if (array[i] != array[j])
+			{
+				swap(&array[i], &array[j]);
 				print_array(array, 10);
+			}
 		}
 	}
-	swap(&array[i + 1], &array[high]);
-	print_array(array, 10);
+	if (array[i + 1] != array[high])
+	{
+		swap(&array[i + 1], &array[high]);
+		print_array(array, 10);
+	}
 	return (i + 1);
 }
 /**

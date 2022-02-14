@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 /**
  * shell_sort - Function that sorts an array of integers
  * in ascending order using the Shell sort algorithm, using
