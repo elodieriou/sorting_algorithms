@@ -61,6 +61,7 @@ void merge_print_step(int *array, int *output,
 		      size_t start, size_t mid, size_t end)
 {
 	printf("Merging...\n");
+
 	printf("[left]: ");
 	print_array(array + start, mid - start);
 	printf("[right]: ");
