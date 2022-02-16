@@ -195,7 +195,7 @@ void f(unsigned int n)
 }
 ```
 
-### 0(n)
+### O(n)
 ```asm
 void f(int n)
 {
