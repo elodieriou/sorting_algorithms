@@ -8,15 +8,48 @@
 This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
 
 ## Resources
-Read or watch:
-
+### Before coding:
 [Sorting algorithm](https://intranet.hbtn.io/rltoken/tmzgO7xhCpNgPUxVhLKibw)
-
 [Big O notation](https://intranet.hbtn.io/rltoken/XrLMaOhUMHfwsFEz15TVow)
-
 [Sorting algorithms animations](https://intranet.hbtn.io/rltoken/kJ7rgWoqdLnxSnSEoAiFCQ)
-
 [15 sorting algorithms in 6 minutes](https://intranet.hbtn.io/rltoken/RdvoGNMTJ6Hq34aJ_HmCqA) (WARNING: The following video can trigger seizure/epilepsy. It is not required for the project, as it is only a funny visualization of different sorting algorithms)
+
+### Task #0 Bubble sort
+[Geek for Geek](https://www.geeksforgeeks.org/bubble-sort/)
+
+### Task #1 Insertion sort
+Personal inspiration :blush:
+
+### Task #2 Selection sort
+[Programiz](https://www.programiz.com/dsa/selection-sort)
+
+### Task #3 Quick sort - Lomuto partition
+[Geek for Geek](https://www.geeksforgeeks.org/hoares-vs-lomuto-partition-scheme-quicksort/)
+
+### Task #4 Shell sort - Knuth Sequence
+[Programiz](https://www.programiz.com/dsa/shell-sort)
+
+### Task #5 Cocktail shaker sort
+Personal inspiration :grin:
+
+### Task #6 Counting sort
+[Programiz](https://www.programiz.com/dsa/counting-sort)
+
+### Task #7 Merge sort
+[Programiz](https://www.programiz.com/dsa/merge-sort)
+
+### Task #8 Heap sort
+[Youtube](https://www.youtube.com/watch?v=cCiyQ1Z_NBY&t=728s)
+[Geek for Geek](https://www.geeksforgeeks.org/heap-sort/)
+
+### Task #9 Radix sort
+[Programiz](https://www.programiz.com/dsa/radix-sort)
+
+### Task #10 Bitonic sort
+[Geek for Geek](https://www.geeksforgeeks.org/bitonic-sort/)
+
+### Task #11 Quick sort - Hoare partition
+We have validated half of the checks :neutral_face:
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
@@ -132,8 +165,95 @@ Please use the “short” notation (don’t use constants). Example: ```O(nk)``
 ### Tests
 Here is a quick tip to help you test your sorting algorithms with big sets of random integers: [Random.org](https://intranet.hbtn.io/rltoken/KkFXByKWf55lTK32JnY62w)
 
+## Summary
+![Complexity Big O](https://i.ytimg.com/vi/47GRtdHOKMg/maxresdefault.jpg)
+
+This graph present the different complexity of program with the notation Big O. 
+From the best O(1) to the worse 0(n!).
+
+### O(1)
+```asm
+void f(int n)
+{
+    printf("n = %d\n", n);
+}
+```
+
+### O(log(n))
+```asm
+void f(unsigned int n)
+{
+    int i;
+
+    for (i = 1; i < n; i = i * 2)
+    {
+        printf("[%d]\n", i);
+    }
+}
+```
+
+### 0(n)
+```asm
+void f(int n)
+{
+    int i;
+
+    for (i = 0; i < n; i++)
+    {
+        printf("[%d]\n", i);
+    }
+}
+```
+
+### O(nlog(n))
+```asm
+void f(unsigned int n)
+{
+    int i;
+    int j;
+
+    for (i = 0; i < n; i++)
+    {
+        for (j = 1; j < n; j = j * 2)
+        {
+            printf("[%d] [%d]\n", i, j);
+        }
+    }
+}
+```
+
+### O(n^2)
+```asm
+void f(int n)
+{
+     int i;
+     int j;
+
+     for (i = 0; i < n; i++)
+     {
+          for (j = i + 1; j < n; j++)
+          {
+               printf("[%d] [%d]\n", i, j);
+          }
+     }
+}
+```
+
+### O(2^n)
+```asm
+int Fibonacci(int number)
+{
+    if (number <= 1) return number;
+
+    return Fibonacci(number - 2) + Fibonacci(number - 1);
+}
+```
+
+### O(n!)
+No example because we don't do it!!! 
+
 ## Cloning the repo
-To clone thid repository, run the command:
+To clone this repository, run the command:
 ```
 git clone git@github.com:rmarcais/sorting_algorithms.git
 ```
